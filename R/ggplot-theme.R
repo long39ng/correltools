@@ -28,7 +28,7 @@ theme_correlaid <- function(base_size = 14,
                             base_line_size = base_size / 28,
                             base_rect_size = base_size / 28,
                             grid = "XY") {
-  if (length(grid) != 1 || !grepl("none|X|Y|x|y", grid)) {
+  if (length(grid) != 1L || !grepl("^(none|[XYxy]+)$", grid)) {
     stop('`grid` must be a string: "none" or any combination of "X", "Y", "x", and "y"')
   }
 
